@@ -120,8 +120,8 @@
 }
 
 .liste__item:hover .liste__icone i {
-  -webkit-animation: rotate 0.5s 0.2s both;
-          animation: rotate 0.5s 0.2s both;
+  -webkit-animation: rotate 0.5s 0.1s both;
+          animation: rotate 0.5s 0.1s both;
 }
 
 .liste__texte {

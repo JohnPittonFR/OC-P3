@@ -96,7 +96,7 @@
             }
 
             .liste__icone i{
-                animation: rotate 0.5s 0.2s both;
+                animation: rotate 0.5s 0.1s both;
             }
         }
     }
@@ -171,7 +171,7 @@
     0% {
         transform: rotate(0);
 }
-100% {
+    100% {
         transform: rotate(360deg);
     }
 }
