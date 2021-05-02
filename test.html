@@ -1,0 +1,65 @@
+<div class="liste__item">
+    <div class="liste__texte">
+        <h4 class="liste__plat">Par ici la sortie</h4>
+        <div class="liste__description">Avec fermeture des portes et des fenêtres</div>
+    </div>
+    <div class="liste__prix">24€</div>
+    <!-- <div class="liste__validation">
+        <div class="liste__icone"><i class="fa-check fas"></i></div>
+    </div>     -->
+</div>  
+
+<style>
+
+.liste__item {
+        background-color: white;
+        padding: 1rem;
+        display: flex;
+        border-radius: 0.75rem;
+        margin: 1rem 0;
+        box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        cursor: pointer;
+        max-width: 100%;
+        position: relative;
+        justify-content: space-between;
+        // flex-direction: column;
+        cursor:pointer;
+    }
+
+    .liste__texte{
+        white-space: nowrap;
+        overflow: hidden;     
+        flex: 1;    
+    }
+
+    .liste__plat{
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden; 
+    }
+
+    .liste__description {
+        margin: 0;
+        padding-top:5px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .liste__prix {
+        font-size:16px;
+        cursor: pointer;  
+        font-weight: 600;   
+        transition-duration: .5s; 
+        display: flex;
+        justify-content: flex-end;   
+        align-items: flex-end;
+        padding-right: 30px;;
+    }
+
+
+
+
+</style>
