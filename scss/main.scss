@@ -13,7 +13,7 @@ body, html {
   padding: 1rem 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   position: relative;
-  z-index: 1000;
+  z-index: 20;
 
   &__titre {
     font-family: "Shrikhand", "cursive";
@@ -266,5 +266,59 @@ body, html {
   &__icone{
     width:15px;
     margin-right: 10px;
+  }
+}
+
+.overflow{
+  height: 100%;
+  position: fixed;
+  margin: auto;
+  background-color: white;
+  z-index:30;
+  width: 100%;
+  animation: overflow 2.5s;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__loader {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  &__loader:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid $primaire;
+    border-color: $primaire transparent $primaire transparent;
+    animation: loader 2.5s linear;
+  }
+}
+
+@keyframes overflow {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
