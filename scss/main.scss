@@ -1,13 +1,18 @@
+/* Import des font Roboto et Shrikland */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 
+/* Import des fichiers scss annexes */
 @import "_variables";
 @import "_mixins";
 @import "_menu";
+
 
 body, html {
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
+
+/* HEADER */
 
 .header {
   padding: 1rem 1rem;
@@ -23,212 +28,224 @@ body, html {
   }
 }
 
-.localisation {
-  display: flex;
-  justify-content: center;
-  padding: 1.25rem 1rem;
-  background-color: rgb(243, 243, 243);
-  font-size: 1.2rem;
-  position: relative;
+/* MAIN */
 
-  &__icon {
-    margin-right: 1rem;
-  }
+  /* LOCALISATION */
 
-  &__texte {
-    font-weight: 700;
-  }
-}
-
-.disclaimer {
-  padding: 2rem;
-  text-align: center;
-  background-color: rgb(250, 250, 250);
-
-  &__titre {
-    margin: 0;
-  }
-
-  &__texte {
-    font-weight: 300;
-    margin: 1.5rem 0;
-    font-size: 1.4rem;
-  }
-
-  &__bouton {
-    @include button(primary);
-  }
-}
-
-.tutoriel {
-  padding: 1rem;
-  max-width: 1440px;
-  margin:0 auto;
-
-  &__titre {
-    margin-top: 0;
-    font-weight:600;
-  }
-
-  &__etapes{
-    display: grid;
-    @media (min-width: 1000px){
-      grid-template-columns: repeat(3,1fr);
-      column-gap: 10px;
-    }  
-  }
-}
-
-.etape {
-    padding: 25px;
-    margin: 1rem 0 1rem 0.75rem;
-    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
-    border-radius: 1.25rem;
-    background-color: #f6f6f6;
+  .localisation {
     display: flex;
+    justify-content: center;
+    padding: 1.25rem 1rem;
+    background-color: rgb(243, 243, 243);
+    font-size: 1.2rem;
     position: relative;
-    font-size:1rem;
-    cursor:default;
 
-    &:hover {
-      background-color: lighten($color: #f6f6f6, $amount: 30);
-      box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.4);
-
-      .etape__icone {
-        color:#9356dc;
-      }
-    }
-
-    &__chiffre{
-      background: $primaire;
-      height: 1.5rem;
-      width: 1.5rem;
-      border-radius: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      position: absolute;
-      left: -5px;      
-    }
-
-    &__icone {
-      color:grey;
-      margin: 2px 0 0 15px;
-      display: inline-block;
-      width: 20px;
-
+    &__icon {
+      margin-right: 1rem;
     }
 
     &__texte {
-      margin: 2px 0 0 20px;
-      font-weight: 500;
-    }
-}
-
-.restaurants {
-  background-color: #f6f6f6;
-  padding: 1rem;
-  max-width: 1440px;
-  margin:0 auto;
-}
-
-.cartes {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  column-gap: 2rem;
-  row-gap: 2rem;
-  @media (min-width: 1000px){
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 10px;
-  }  
-}
-
-.carte {
-  background-color: white;
-  border-radius: 1rem;
-  position: relative;
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  overflow:hidden;
-
-  &__image {
-    height: 12rem;
-    width: 100%;
-    border: transparent solid 0px;
-    border-radius: 1rem 1rem 0 0;
-    box-shadow: none;
-    object-fit: cover;
-    max-width: 100%;
-    transition: all 2s;
-
-    &:hover{
-      transform: scale(1.03);
-      transition: all 4s;
+      font-weight: 700;
     }
   }
 
-  &__badge {
-    background-color: $tertiaire;
-    color: darken($tertiaire, 50%);
-    padding: 0.5rem;
-    border-radius: 0.125rem;
-    position: absolute;
-    top: 1rem;
-    right: 0.75rem;
-  }  
+  /* DISCLAIMER */
+  
+  .disclaimer {
+    padding: 2rem;
+    text-align: center;
+    background-color: rgb(250, 250, 250);
 
-  &__footer {
+    &__titre {
+      margin: 0;
+    }
+
+    &__texte {
+      font-weight: 300;
+      margin: 1.5rem 0;
+      font-size: 1.4rem;
+    }
+
+    &__bouton {
+      @include button(primary);
+    }
+  }
+
+  /* TUTORIEL */
+
+  .tutoriel {
     padding: 1rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
+    max-width: 1440px;
+    margin:0 auto;
 
-  &__titre {
-    margin: 0;
-    margin-bottom: 0.25rem;
-    width: 100%;
-  }
-
-  &__description {
-    margin: 0;
-  }
-
-  &__coeur {
-    position:absolute;
-    right:30px;
-    top:20px;
-    font-size:25px;
-    cursor: pointer;
-
-    &--plein{
-      background-image: linear-gradient(175deg, #ff79da, #9356dc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;     
-      opacity: 0; 
-      position:absolute;
-      right:0;
-      top:2px;
+    &__titre {
+      margin-top: 0;
+      font-weight:600;
     }
 
-
-    &:hover{
-
-      .carte__coeur--vide{
-        transition-duration: 1s;
-        opacity:0;
-      }
-
-      .carte__coeur--plein{
-        opacity:1;
-        transition-duration: 1s;
-      }
-    }      
+    &__etapes{
+      display: grid;
+      @media (min-width: 1000px){
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 10px;
+      }  
+    }
   }
-}
+
+  .etape {
+      padding: 25px;
+      margin: 1rem 0 1rem 0.75rem;
+      box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+      border-radius: 1.25rem;
+      background-color: #f6f6f6;
+      display: flex;
+      position: relative;
+      font-size:1rem;
+      cursor:default;
+
+      &:hover {
+        background-color: lighten($color: #f6f6f6, $amount: 30);
+        box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.4);
+
+        .etape__icone {
+          color:#9356dc;
+        }
+      }
+
+      &__chiffre{
+        background: $primaire;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: absolute;
+        left: -5px;      
+      }
+
+      &__icone {
+        color:grey;
+        margin: 2px 0 0 15px;
+        display: inline-block;
+        width: 20px;
+
+      }
+
+      &__texte {
+        margin: 2px 0 0 20px;
+        font-weight: 500;
+      }
+  }
+
+  /* RESTAURANTS */
+
+  .restaurants {
+    background-color: #f6f6f6;
+    padding: 1rem;
+    max-width: 1440px;
+    margin:0 auto;
+  }
+
+  .cartes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+    @media (min-width: 1000px){
+      grid-template-columns: repeat(2,1fr);
+      column-gap: 10px;
+    }  
+  }
+
+  .carte {
+    background-color: white;
+    border-radius: 1rem;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    overflow:hidden;
+
+    &__image {
+      height: 12rem;
+      width: 100%;
+      border: transparent solid 0px;
+      border-radius: 1rem 1rem 0 0;
+      box-shadow: none;
+      object-fit: cover;
+      max-width: 100%;
+      transition: all 2s;
+
+      &:hover{
+        transform: scale(1.03);
+        transition: all 4s;
+      }
+    }
+
+    &__badge {
+      background-color: $tertiaire;
+      color: darken($tertiaire, 50%);
+      padding: 0.5rem;
+      border-radius: 0.125rem;
+      position: absolute;
+      top: 1rem;
+      right: 0.75rem;
+    }  
+
+    &__footer {
+      padding: 1rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    &__titre {
+      margin: 0;
+      margin-bottom: 0.25rem;
+      width: 100%;
+    }
+
+    &__description {
+      margin: 0;
+    }
+
+    &__coeur {
+      position:absolute;
+      right:30px;
+      top:20px;
+      font-size:25px;
+      cursor: pointer;
+
+      &--plein{
+        background-image: linear-gradient(175deg, #ff79da, #9356dc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;     
+        opacity: 0; 
+        position:absolute;
+        right:0;
+        top:2px;
+      }
+
+
+      &:hover{
+
+        .carte__coeur--vide{
+          transition-duration: 1s;
+          opacity:0;
+        }
+
+        .carte__coeur--plein{
+          opacity:1;
+          transition-duration: 1s;
+        }
+      }      
+    }
+  }
+
+/* FOOTER */
 
 .footer{
   background-color: #353535;
@@ -268,6 +285,8 @@ body, html {
     margin-right: 10px;
   }
 }
+
+/* LOADER */
 
 .overflow{
   height: 100%;

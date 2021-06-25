@@ -1,4 +1,7 @@
+/* Import des font Roboto et Shrikland */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+/* Import des fichiers scss annexes */
+/* HEADER */
 .header__fleche {
   position: absolute;
   left: 2rem;
@@ -20,6 +23,7 @@
   color: black;
 }
 
+/* MAIN */
 .imageMenu {
   max-width: 100%;
   -o-object-fit: cover;
@@ -28,6 +32,7 @@
   max-height: 26rem;
 }
 
+/* MENU */
 .menu {
   margin: -4rem auto 0;
   border-radius: 2rem 2rem 0 0;
@@ -211,6 +216,7 @@
           transition-duration: 0.5s;
 }
 
+/* ANIMATION MENU */
 @-webkit-keyframes rotate {
   0% {
     -webkit-transform: rotate(0);
@@ -221,7 +227,6 @@
             transform: rotate(360deg);
   }
 }
-
 @keyframes rotate {
   0% {
     -webkit-transform: rotate(0);
@@ -309,6 +314,7 @@ body, html {
   font-family: 'Roboto', sans-serif;
 }
 
+/* HEADER */
 .header {
   padding: 1rem 1rem;
   -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
@@ -324,6 +330,8 @@ body, html {
   font-weight: 600;
 }
 
+/* MAIN */
+/* LOCALISATION */
 .localisation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -345,6 +353,7 @@ body, html {
   font-weight: 700;
 }
 
+/* DISCLAIMER */
 .disclaimer {
   padding: 2rem;
   text-align: center;
@@ -385,6 +394,7 @@ body, html {
   color: inherit;
 }
 
+/* TUTORIEL */
 .tutoriel {
   padding: 1rem;
   max-width: 1440px;
@@ -466,6 +476,7 @@ body, html {
   font-weight: 500;
 }
 
+/* RESTAURANTS */
 .restaurants {
   background-color: #f6f6f6;
   padding: 1rem;
@@ -588,6 +599,7 @@ body, html {
           transition-duration: 1s;
 }
 
+/* FOOTER */
 .footer {
   background-color: #353535;
   color: #ffffff;
@@ -632,6 +644,7 @@ body, html {
   margin-right: 10px;
 }
 
+/* LOADER */
 .overflow {
   height: 100%;
   position: fixed;
